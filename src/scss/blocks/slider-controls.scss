@@ -1,0 +1,28 @@
+.slider-controls {
+  display: grid;
+  gap: 15px;
+  &__arrows {
+    display: flex;
+    gap: 5px;
+    opacity: 0.3;
+  }
+  &__count {
+    display: flex;
+    column-gap: 6px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+    color: rgba(#fff, .3);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: right;
+
+  }
+  &__count-current, .swiper-pagination-current {
+    font-size: 32px;
+    line-height: 0.75;
+    color: #fff;
+  }
+  &__slider-total {}
+}

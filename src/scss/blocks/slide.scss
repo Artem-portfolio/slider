@@ -1,0 +1,178 @@
+$radial-bg: radial-gradient(
+  50% 50% at 50% 50%,
+  rgba(0, 0, 0, 0) 0%,
+  rgba(0, 0, 0, 0.2) 100%
+);
+$linear-bg: linear-gradient(
+  181deg,
+  rgba(0, 0, 0, 0.2) 0.91%,
+  rgba(255, 255, 255, 0) 116.71%,
+  rgba(255, 255, 255, 0) 116.72%
+);
+
+@mixin bg-repeat {
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.slide {
+  height: 100vh;
+  overflow: hidden;
+  padding-bottom: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--norway {
+    background: $radial-bg, $linear-bg, url(../img/01.jpg);
+    @include bg-repeat();
+  }
+  &--austria {
+    background: $radial-bg, $linear-bg, url(../img/02.jpg);
+    @include bg-repeat();
+  }
+  &--uae {
+    background: $radial-bg, $linear-bg, url(../img/03.jpg);
+    @include bg-repeat();
+  }
+  &--thailand {
+    background: $radial-bg, $linear-bg, url(../img/04.jpg);
+  }
+  &--marocco {
+    background: $radial-bg, $linear-bg, url(../img/05.jpg);
+    @include bg-repeat();
+  }
+
+  color: #fff;
+
+  &::before {
+    content: '';
+  }
+
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  @media (max-width: 1200px) {
+    padding-bottom: 60px;
+  }
+  @media (max-width: 1200px) {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  &__header {
+    text-align: center;
+    position: relative;
+  }
+  &__tagline {
+    font-weight: 500;
+    font-size: 1.56vw;
+    letter-spacing: 0.55em;
+    line-height: 1.23;
+    color: rgba($color: #fff, $alpha: 0.7);
+
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    @media (max-width: 767px) {
+      font-size: 3vw;
+    }
+  }
+  &__title {
+    font-size: 13vw;
+    font-weight: 700;
+    line-height: 1.22;
+    display: inline-block;
+
+    @media (max-width: 767px) {
+      font-size: 19vw;
+    }
+
+    
+    background: linear-gradient(
+      47.06deg,
+      #000000 -3.87%,
+      rgba(255, 255, 255, 0) 20.89%
+      ),
+      #fff;
+      
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    // &--norway {
+    //   span {
+    //     background: linear-gradient(
+    //         47.06deg,
+    //         #051d27 -3.87%,
+    //         rgba(255, 255, 255, 0) 20.89%
+    //       ),
+    //       #fff;
+
+    //   }
+    // }
+    // &--austria {
+    //   span {
+    //     background: linear-gradient(
+    //         47.06deg,
+    //         #122127 -3.87%,
+    //         rgba(255, 255, 255, 0) 20.89%
+    //       ),
+    //       #fff;
+
+    //   }
+    // }
+    // &--uae {
+    //   span {
+    //     background: linear-gradient(
+    //         47.06deg,
+    //         #aa6621 -3.87%,
+    //         rgba(255, 255, 255, 0) 20.89%
+    //       ),
+    //       #fff;
+
+    //   }
+    // }
+
+    // &--thailand {
+    //   span {
+    //     background: linear-gradient(
+    //         47.06deg,
+    //         #2e7c88 -3.87%,
+    //         rgba(255, 255, 255, 0) 20.89%
+    //       ),
+    //       #fff;
+
+    //   }
+    // }
+    // &--marocco {
+    //   span {
+    //     background: linear-gradient(
+    //         47.06deg,
+    //         #757575 -3.87%,
+    //         rgba(255, 255, 255, 0) 20.89%
+    //       ),
+    //       #fff;
+
+    //   }
+    // }
+  }
+  &__locations {
+    display: flex;
+    column-gap: 30px;
+    width: 70%;
+    margin: 0 auto;
+    @media (max-width: 1023px) {
+      width: 90%;
+    }
+    @media (max-width: 767px) {
+      width: 90%;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+}
